@@ -1,0 +1,13 @@
+{% extends 'index.html'%}
+{% block label %}
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Get Summary</button>
+</form>
+{% if f %}
+<div class="jumbotron" style="color:black">
+    {{str}}
+</div>
+{% endif %}
+{% endblock %}
